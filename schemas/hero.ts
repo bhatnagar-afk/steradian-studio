@@ -11,7 +11,6 @@ export default defineType({
       type: 'reference',
       to: [{type: 'category'}],
     }),
-
     defineField({name: 'title', title: 'Title', type: 'string'}),
     defineField({name: 'subtitle', title: 'Subtitle', type: 'string'}),
     defineField({
@@ -19,6 +18,13 @@ export default defineType({
       title: 'Hero Image',
       type: 'image',
       options: {hotspot: true},
+    }),
+    defineField({
+      name: 'additionalImages',
+      title: 'Additional Images',
+      type: 'array',
+      of: [{type: 'image'}],
+      options: {layout: 'grid'},
     }),
   ],
 })
