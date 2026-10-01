@@ -13,10 +13,11 @@ export default defineType({
       of: [{type: 'string'}],
     }),
     defineField({
-      name: 'image',
-      title: 'Image',
-      type: 'image',
-      options: {hotspot: true},
+      name: 'images',
+      title: 'Images',
+      type: 'array',
+      of: [{type: 'image', options: {hotspot: true}}],
+      options: {layout: 'grid'},
     }),
   ],
 })
